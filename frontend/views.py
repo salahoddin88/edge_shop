@@ -15,9 +15,6 @@ class HomePage(View):
             'navigationProductCategory' : navigationProductCategory,
             'productCategory' : productCategory
         }
-
-
-
         return render(request, 'home-page.html', context)
 
 
