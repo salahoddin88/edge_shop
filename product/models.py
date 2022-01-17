@@ -13,7 +13,7 @@ class ProductCategory(models.Model):
 
 class Product(models.Model):
     """ Product Model """
-    product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
+    product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, related_name="ProductCategory")
     name = models.CharField(max_length=255)
     description = models.TextField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
