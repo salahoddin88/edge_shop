@@ -14,7 +14,7 @@
                         </div>
                         <ul style="display: none;">
                             {% for navigationProductCategory in navigationProductCategories %}
-                                <li><a href="#">{{navigationProductCategory.name}}</a></li>
+                                <li><a href="{% url 'ProductListing' product_category_id=navigationProductCategory.id %}" >{{navigationProductCategory.name}}</a></li>
                             {% endfor %}
                             
                         </ul>
