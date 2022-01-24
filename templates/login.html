@@ -12,6 +12,7 @@
             <form method="post" action="{% url 'Login' %}">
                 {% csrf_token %}
                 <div class="row">
+                    <input type="hidden" name="next" value="{{next}}">
                     {{form}}
                 </div>
                 <a class="text-info" href="{% url 'Login' %}"><i class="fa fa-user"></i> Don't have account? Create Account</a>
