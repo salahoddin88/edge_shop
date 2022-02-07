@@ -26,7 +26,7 @@ class Login(View):
         form = self.form_class(data=request.POST)
         if form.is_valid():
             AuthLogin(request, form.get_user())
-            if request.POST.get('next'):
+            if request.POST.get('next') != 'None':
                 return redirect(request.POST.get('next'))
             return redirect('HomePage')
         context = {

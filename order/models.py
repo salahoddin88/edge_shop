@@ -17,7 +17,8 @@ class Order(models.Model):
     date_time = models.DateTimeField()
     payment_status = models.BooleanField(default=False)
     order_status = models.CharField(max_length=255, choices=order_status_choices, default='Pending')
-
+    razor_pay_order_id = models.CharField(max_length=255, null=True, blank=True)
+    
     def __str__(self):
         return str(self.id)
 
